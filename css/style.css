@@ -1,0 +1,309 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+:root {
+  --bg-section: #eee;
+  --sub-main: #d3504a;
+  --main: #a63636;
+  --heading: #37373f;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: rgba(33, 37, 41, 0.7);
+}
+/* start framework */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+.section-padding {
+  padding: 100px 0;
+}
+.secondary {
+  background-color: var(--white);
+  border-bottom: 1px solid var(--white);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.heading-color {
+  color: var(--heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+}
+.error-message {
+  display: none;
+  color: var(--white);
+  background: #df1529;
+  text-align: left;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.sent-message {
+  display: none;
+  color: var(--white);
+  background: #059652;
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+  font-weight: 600;
+}
+.loading {
+  display: none;
+  background: var(--white);
+  text-align: center;
+  padding: 15px;
+  margin-bottom: 24px;
+}
+.loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  margin: 0 10px -6px 0;
+  border: 3px solid #059652;
+  border-top-color: var(--white);
+  -webkit-animation: animate-loading 1s linear infinite;
+  animation: animate-loading 1s linear infinite;
+}
+button[type="submit"] {
+  background: var(--sub-main);
+  border: 0;
+  padding: 14px 40px;
+  color: var(--white);
+  transition: 0.4s;
+  border-radius: 50px;
+}
+button[type="submit"]:hover {
+  color: var(--white);
+  background: var(--main);
+}
+@media screen and (max-width: 640px) {
+  .section-padding{
+    padding: 50px 0;
+  }
+  .card{
+    margin-bottom: 20px;
+  }
+  .form-bg{
+    padding-top: 10px;
+  }
+}
+/* end framework */
+
+/* start header */
+.navbar-brand span {
+  color: var(--main);
+}
+.navbar .nav-item .nav-link {
+  transition: all 0.3s ease-in-out;
+}
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:hover {
+  color: var(--main);
+  border-bottom: 2px solid var(--main);
+}
+/* end header */
+/* start hero */
+.hero {
+  background-color: var(--bg-section);
+  padding: 136px 0 100px;
+}
+/* end hero */
+/* start main */
+/* start about */
+.about {
+  padding: 100px 0 0;
+}
+.about h2 {
+  margin-bottom: 70px;
+}
+.about .about-img {
+  background-image: url("../img/about.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+.about .content li {
+  padding: 0 0 8px 26px;
+  color: var(--gray);
+}
+.about .content i {
+  color: var(--main);
+}
+.about .counter-box {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.3)),
+    url("../img/about2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--white);
+  margin-top: 50px;
+  padding-top: 160px;
+  padding-bottom: 200px;
+}
+/* end about */
+/* start menu section */
+.menu .filters_menu li {
+  cursor: pointer;
+  padding: 7px 20px;
+  transition: all 0.2s ease-in-out;
+}
+.menu .filters_menu li.active {
+  border-bottom: 2px solid var(--main);
+}
+.menu .filters-content .card {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* end menu section */
+/* start event section  */
+.event {
+  background-color: var(--bg-section);
+}
+.event .event-name {
+  margin: 0 25px;
+}
+.event .event-name img {
+  max-height: 50vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.event .event-name p {
+  color: var(--main);
+  font-family: "Dancing Script", cursive;
+}
+/* end event section */
+/* start chefs section */
+.chefs .card {
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.chefs .card:hover {
+  transform: scale(1.1);
+}
+.chefs .card p {
+  color: var(--gray);
+}
+/* end chefs section */
+/* start book */
+.book {
+  background-color: var(--bg-section);
+}
+.book .heading h2 {
+  color: var(--heading);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: "Dancing Script", cursive;
+}
+.book .heading h2 span {
+  color: var(--main);
+}
+.book .book-img {
+  background-image: url("../img/book.jpg");
+  min-height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+.book .form-bg {
+  background-color: var(--white);
+}
+.book form input,
+.book form textarea {
+  border-radius: 0;
+  outline: none;
+  padding: 12px 15px;
+}
+/* end book */
+/* start gallery */
+.gallery-image {
+  margin: 0 25px;
+}
+.gallery-image img {
+  min-height: 40vh;
+  max-height: 50vh;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+/* end gallery */
+/* start contact section */
+.contact {
+  background-color: var(--bg-section);
+}
+.contact form {
+  background-color: var(--white);
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+}
+/* end contact section */
+/* strat footer */
+footer {
+  background-color: #1f1f24;
+  font-size: 14px;
+  padding: 50px 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+footer i {
+  margin-right: 15px;
+  font-size: 24px;
+  line-height: 0;
+}
+footer h4 {
+  font-size: 16px;
+  font-weight: bold;
+  position: relative;
+  padding-bottom: 5px;
+  color: var(--white);
+}
+footer .footer-links {
+  margin-bottom: 30px;
+}
+
+footer .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+footer .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+footer .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+footer .footer-links ul a {
+  color: rgba(255, 255, 255, 0.6);
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+footer .footer-links ul a:hover {
+  color: var(--white);
+}
+
+footer .social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-right: 10px;
+  transition: 0.3s;
+  padding-left: 17px;
+}
+
+footer .social-links a:hover {
+  color: var(--white);
+  border-color: var(--white);
+}
+/* end footer */
+/* end main */
