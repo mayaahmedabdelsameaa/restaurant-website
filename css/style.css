@@ -15,6 +15,7 @@
 body {
   margin: 0;
   padding: 0;
+  color: var(--black);
 }
 a {
   text-decoration: none;
@@ -96,11 +97,15 @@ button[type="submit"]:hover {
 /* end framework */
 
 /* start header */
+.navbar-brand{
+  color: var(--black);
+}
 .navbar-brand span {
   color: var(--main);
 }
 .navbar .nav-item .nav-link {
   transition: all 0.3s ease-in-out;
+  color: var(--black);
 }
 .navbar .nav-item .nav-link.active,
 .navbar .nav-item .nav-link:hover {
